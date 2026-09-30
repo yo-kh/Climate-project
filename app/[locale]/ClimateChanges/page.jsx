@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import Link from "next/link";
-export default function page() {
+import Link from "@/i18n/navigation";
+export default function Page() {
   const t = useTranslations('climate')
   return (
     <div>
@@ -221,7 +221,7 @@ export default function page() {
                   d="m10.5 1.94-.53.53-4.82 4.82a1 1 0 0 0 0 1.42l4.82 4.82.53.53L11.56 13l-.53-.53L6.56 8l4.47-4.47.53-.47z"
                 />
               </svg>
-              <Link href="./EnviromentalChallenges">{t('environment')}</Link>
+              <Link href="/EnviromentalChallenges">{t('environment')}</Link>
             </div>
           </div>
       </section>

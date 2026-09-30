@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl"
-import { Link } from "@/i18n/routing"
-export default function page(){
+import { Link } from "@/i18n/navigation"
+export default function Page(){
     const t = useTranslations('landing')
     return(
         <div className="h-dvh w-screen">

@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import Link from "next/link";
-export default function page() {
+import Link from "@/i18n/navigation";
+export default function Page() {
   const t = useTranslations('environment')
   return (
     <div className="relative">
@@ -119,7 +119,7 @@ export default function page() {
           <div className="flex flex-col w-fit">
             <h5 className="text-sm">{t('next')}</h5>
             <div className="flex flex-row justify-center">
-              <Link href="./EnviromentalChallenges">
+              <Link href="/EnviromentalChallenges">
                 {t('environmentalChallenges')}
               </Link>
               <svg

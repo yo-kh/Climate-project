@@ -1,12 +1,12 @@
 import { useTranslations } from "next-intl";
-import Link from "next/link";
-export default function page() {
+import Link from "@/i18n/navigation";
+export default function Page() {
   const t = useTranslations('challenges')
   return (
     <div>
       <section className="sticky flex flex-col justify-center items-center top-0 h-dvh gap-10">
         <div className="relative h-full">
-          <img src="/Home page.png" className="w-screen h-full object-cover" />
+          <img src="/Home_page.png" className="w-screen h-full object-cover" />
           <div className="flex flex-col justify-center items-center absolute inset-0 z-20">
             <h1 className="text-2xl p-5 md:text-7xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#658A64] to-[#14281D] [-webkit-text-stroke:0.5px_#F1F5F2]">
               {t('title')}
@@ -41,7 +41,7 @@ export default function page() {
               </p>
             </div>
             <img
-              src="/global warming.png"
+              src="/global_warming.png"
               alt={t('globalWarmingImageAlt')}
               className="rounded-2xl "
             />
@@ -94,13 +94,13 @@ export default function page() {
                   d="m10.5 1.94-.53.53-4.82 4.82a1 1 0 0 0 0 1.42l4.82 4.82.53.53L11.56 13l-.53-.53L6.56 8l4.47-4.47.53-.47z"
                 />
               </svg>
-              <Link href="./Environment/#Environment_header">{t('environment')}</Link>
+              <Link href="/Environment">{t('environment')}</Link>
             </div>
           </div>
           <div>
             <h5 className="text-sm">{t('next')}</h5>
             <div className="flex items-center">
-              <Link href="./ClimateChanges">{t('earthClimate')}</Link>
+              <Link href="/ClimateChanges">{t('earthClimate')}</Link>
               <svg viewBox="0 0 16 16" height="24" width="24">
                 <path
                   fill="white"
