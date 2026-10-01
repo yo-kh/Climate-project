@@ -9,7 +9,7 @@ export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const t = useTranslations()
+  const t = useTranslations();
 
   const switchTo = locale === "en" ? "ar" : "en";
 
@@ -20,7 +20,7 @@ export default function Navbar() {
     { href: "/Environment", label: t("environment.title") },
     { href: "/EnviromentalChallenges", label: t("challenges.title") },
     { href: "/ClimateChanges", label: t("climate.title") },
-  ]
+  ];
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -58,7 +58,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 ${locale == 'en' ? 'right-0' : 'left-0'} z-50 transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 ${locale == "en" ? "right-0" : "left-0"} z-50 transition-transform duration-300 ease-in-out ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -96,19 +96,19 @@ export default function Navbar() {
         }`}
       />
       <div
-        className={`fixed top-0  z-40 h-screen w-64 bg-[#14281D] text-white transition-transform duration-300 ${
+        className={`fixed top-0  z-40 h-dvh w-64 bg-[#14281D] text-white transition-transform duration-300 ${
           open ? "translate-x-0" : "-translate-x-full rtl:translate-x-full"
         }`}
       >
         <div>
-          <div className="flex flex-col gap-6 p-10 pt-20">
+          <div className="flex flex-col gap-6 p-10">
             {links.map((l) => (
-            <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
-              {l.label}
-            </Link>
-          ))}
+              <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
+                {l.label}
+              </Link>
+            ))}
           </div>
-          <p className="fixed bottom-0 text-[10px] p-4 text-center">
+          <p className="fixed bottom-0 pb-5 text-[10px] p-4 text-center">
             © 2026 Youssef Tawfik | Mohammed Naguib School. All rights reserved.
           </p>
         </div>
