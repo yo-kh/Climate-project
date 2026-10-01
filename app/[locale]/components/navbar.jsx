@@ -101,7 +101,7 @@ export default function Navbar() {
         }`}
       >
         <div>
-          <div className="flex flex-col gap-6 p-10">
+          <div className="flex flex-col gap-6 p-10 pt-20">
             {links.map((l) => (
               <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
                 {l.label}
